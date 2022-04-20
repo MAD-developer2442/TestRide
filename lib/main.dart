@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     mySLides = getSlides();
-    controller = new PageController();
+    controller = PageController();
   }
 
   @override
@@ -147,7 +147,7 @@ class _HomeState extends State<Home> {
                   alignment: Alignment.center,
                   child: const Text(
                     "GET STARTED NOW",
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -164,11 +164,13 @@ class _HomeState extends State<Home> {
     final status = await Permission.locationWhenInUse.request();
 
     if (status == PermissionStatus.granted) {
+
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
       );
-      isLocation;
+
+      ServiceStatus.enabled;
       print('Permission Granted');
     } else if (status == PermissionStatus.denied) {
       print('Permission denied');

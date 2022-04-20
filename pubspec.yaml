@@ -20,7 +20,11 @@ dependencies:
   shared_preferences: ^2.0.6
   get:
   get_storage:
-  permission_handler: ^9.2.0
+  permission_handler:
+  geolocator:
+  android_intent:
+  location:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
